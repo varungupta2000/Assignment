@@ -1,8 +1,9 @@
 import NewsLetter from "./componenets/NewsLetter";
-import "./index.scss"
+import Numbers from "./componenets/Numbers";
 function App() {
   return (
-    <div className="container">
+    <div>
+      <Numbers/>
       <NewsLetter />
     </div>
   );

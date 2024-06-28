@@ -1,0 +1,78 @@
+@use './../../styles/colors' as *;
+@use "./../../styles//breakpoints" as *;
+
+.container {
+    background-color: $light_grey;
+
+    .wrapper {
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 32px 16px;
+
+        @include breakpoints("xl-tab") {
+            padding: 70px 148px 100px;
+        }
+
+        .dataWrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+
+            @include breakpoints("xl-tab") {
+                flex-direction: row;
+                column-gap: 122px;
+                row-gap: 50px;
+                flex-wrap: wrap;
+            }
+
+            .title {
+                color: $blue;
+                font-family: 'FSAlbert';
+                font-size: 18px;
+                margin-bottom: 15px;
+
+                @include breakpoints("desktop") {
+                    font-size: 24px;
+                }
+            }
+
+            .numbers {
+                color: $blue;
+                font-family: 'FSAlbert';
+                font-weight: bold;
+                font-size: 50px;
+
+                @include breakpoints("desktop") {
+                    font-size: 80px;
+                }
+            }
+
+            .subTitle {
+                color: $blue;
+                font-family: 'FSAlbert';
+                font-weight: bold;
+                font-size: 18px;
+
+                @include breakpoints("desktop") {
+                    font-size: 26px;
+                }
+            }
+
+            .description {
+                color: $blue;
+                font-family: 'FSAlbert';
+                font-weight: 300;
+                font-style: normal;
+                font-size: 16px;
+                width: 280px;
+                margin-top: 15px;
+
+                @include breakpoints("desktop") {
+                    font-size: 20px;
+                    width: 320px;
+                }
+            }
+        }
+    }
+}
