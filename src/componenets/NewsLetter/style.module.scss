@@ -1,0 +1,94 @@
+@use './../../styles/colors' as *;
+@use "./../../styles//breakpoints" as *;
+
+.container {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include breakpoints("small-desktop") {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 140px;
+        }
+
+        .leftContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+
+            .heading {
+                color: $blue;
+                font-family: 'FSAlbert';
+                font-weight: bold;
+                font-style: normal;
+                font-size: 40px;
+                margin: 0;
+            }
+
+            .subHeading {
+                margin: 0;
+                max-width: 580px;
+                font-family: 'FSAlbert';
+                font-style: normal;
+                font-size: 20px;
+                color: $dark_grey;
+            }
+
+            .inputContainer {
+                display: flex;
+                gap:10px;
+
+                .input {
+                    width: 150px;
+                    border: 1px solid #00000029;
+                    border-radius: 10px;
+                    padding-left: 4px;
+
+
+                    @include breakpoints("small-desktop") {
+                        width: 500px;
+                        padding-left: 29px;
+
+                    }
+                }
+
+                .subscribeButton {
+                    background-color: $blue;
+                    color: white;
+                    padding: 10px 15px;
+                    border-radius: 20px;
+                    font-family: 'FSAlbert';
+                    font-weight: bold;
+                    font-size: 14px;
+                    display: flex;
+                    gap: 3px;
+                    text-wrap: nowrap;
+
+                    @include breakpoints("desktop") {
+                        padding: 20px 30px;
+                        font-size: 18px;
+                        gap: 10px;
+                    }
+
+                    .subscribeImage {
+                        width: 12px;
+                        height: 15px;
+                    }
+                }
+            }
+        }
+        .image{
+            @include breakpoints("xl-tab") {
+                width: 400px;
+                height: 200px;
+            }
+
+            @include breakpoints("desktop") {
+                width: 718px;
+                height: 364px;
+            }
+        }
+    }
+}

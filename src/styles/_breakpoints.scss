@@ -1,0 +1,48 @@
+$breakpoints: (
+    'mobile': (
+        min-width: 360px,
+    ),
+    'tab': (
+        min-width: 768px,
+    ),
+    'large-tab': (
+        min-width: 1024px,
+    ),
+    'xl-tab': (
+        min-width: 1290px,
+    ),
+    'small-desktop': (
+        min-width: 1440px,
+    ),
+    'desktop': (
+        min-width: 1600px,
+    ),
+    'xl-screen': (
+        min-width: 1790px,
+    ),
+) !default;
+
+@mixin breakpoints($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}

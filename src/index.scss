@@ -1,0 +1,78 @@
+@use "./styles//breakpoints" as *;
+
+@font-face {
+  font-family: 'FSAlbert';
+  src: url('./fonts/FSAlbert-Bold.woff2') format('woff2'),
+       url('./fonts/FSAlbert-Bold.woff') format('woff'),
+       url('./fonts/FSAlbert-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FSAlbert';
+  src: url('./fonts/FSAlbert-ExtraBold.woff2') format('woff2'),
+       url('./fonts/FSAlbert-ExtraBold.woff') format('woff'),
+       url('./fonts/FSAlbert-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FSAlbert';
+  src: url('./fonts/FSAlbert-Italic.woff') format('woff'),
+       url('./fonts/FSAlbert-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'FSAlbert';
+  src: url('./fonts/FSAlbert-Light.woff2') format('woff2'),
+       url('./fonts/FSAlbert-Light.woff') format('woff'),
+       url('./fonts/FSAlbert-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FSAlbert';
+  src: url('./fonts/FSAlbert-Regular.woff2') format('woff2'),
+       url('./fonts/FSAlbert-Regular.woff') format('woff'),
+       url('./fonts/FSAlbert-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FSAlbert';
+  src: url('./fonts/FSAlbert-Thin.woff2') format('woff2'),
+       url('./fonts/FSAlbert-Thin.woff') format('woff'),
+       url('./fonts/FSAlbert-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont,'FSAlbert', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @include breakpoints("xl-tab"){
+  padding: 0 148px;
+  }
+}
