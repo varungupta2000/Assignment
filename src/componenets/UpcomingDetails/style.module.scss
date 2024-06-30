@@ -11,6 +11,8 @@
 
     @include breakpoints("xl-tab") {
         flex-direction: row;
+        justify-content: space-between;
+
         padding: 63px 148px 0px;
     }
 

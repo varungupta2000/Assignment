@@ -1,0 +1,151 @@
+@use './../../styles/colors'as *;
+@use "./../../styles//breakpoints"as *;
+
+.container {
+    background-color: $light_grey;
+
+    .wrapper {
+        max-width: 1920px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 16px;
+        padding-top: 16px;
+
+        @include breakpoints("tab") {
+            flex-direction: row;
+            gap: 80px;
+            padding-top: 0px;
+
+        }
+
+        @include breakpoints("xl-tab") {
+            padding-left: 148px;
+            gap: 250px;
+        }
+
+        @include breakpoints("desktop") {
+            gap: 450px;
+        }
+
+
+        .textWrapper {
+            align-self: center;
+
+            .heading {
+                font-family: 'FSAlbert';
+                font-weight: bold;
+                font-size: 30px;
+                color: $blue;
+
+                @include breakpoints("xl-tab") {
+                    font-size: 40px;
+                }
+            }
+
+            .description {
+                color: $dark_grey;
+                font-family: 'FSAlbert';
+                font-weight: 300;
+                font-size: 18px;
+                padding-right: 16px;
+                height: 130px;
+
+                @include breakpoints("xl-tab") {
+                    font-size: 22px;
+                    padding-right: 0px;
+                    padding-top: 22px;
+                }
+            }
+
+            .button {
+                background-color: $blue;
+                color: white;
+                padding: 20px 34px;
+                margin-top: 22px;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                font-family: 'FSAlbert';
+                font-weight: bold;
+                font-size: 18px;
+                cursor: pointer;
+                margin-bottom: 20px;
+            }
+        }
+
+
+        .image {
+            @include breakpoints("tab") {
+                width: 400px;
+                height: 200px;
+                align-self: center;
+            }
+
+
+            @include breakpoints("xl-tab") {
+                width: 600px;
+                height: 400px;
+            }
+
+            @include breakpoints("desktop") {
+                width: 787px;
+                height: 519px;
+            }
+        }
+    }
+}
+
+.indicators {
+    top: 65%;
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    right: 20px;
+    gap: 10px;
+
+
+    @include breakpoints("tab") {
+        top: 30% !important;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        flex-direction: column;
+    }
+
+    @include breakpoints("xl-tab") {
+        top: 45% !important;
+    }
+
+    @include breakpoints("desktop") {
+        top: 35% !important;
+    }
+
+    .indicator {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: white;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.active {
+    background-color: white !important;
+    height: 40px !important;
+    border-radius: 10% !important;
+
+    @include breakpoints("tab") {
+        width: 10px !important;
+        height: 40px !important;
+    }
+}
+
+
+
+
+
