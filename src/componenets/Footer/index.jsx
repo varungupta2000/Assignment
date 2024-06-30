@@ -24,30 +24,30 @@ const Footer = () => {
                 <div>
                     <p className={styles.heading}>Follow Us</p>
                     <div className={styles.images}>
-                        <img src={Facebook} width={20} height={32} />
-                        <img src={LinkedIn} width={32} height={32} />
-                        <img src={Instagram} width={36} height={32} />
-                        <img src={Twitter} width={38} height={32} />
-                        <img src={YouTube} width={48} height={33} />
-                        <img src={Quora} width={35} height={32} />
+                        <img src={Facebook} width={20} height={32} alt="facebook" />
+                        <img src={LinkedIn} width={32} height={32} alt="linkedin" />
+                        <img src={Instagram} width={36} height={32} alt="instagram" />
+                        <img src={Twitter} width={38} height={32} alt="twitter" />
+                        <img src={YouTube} width={48} height={33} alt="youtube" />
+                        <img src={Quora} width={35} height={32} alt="quora" />
                     </div>
                 </div>
                 <div>
                     <p className={styles.heading}>Head Office</p>
                     <div className={styles.textWrapper}>
-                        <img src={location} width={17} height={25} />
+                        <img src={location} width={17} height={25} alt="img" />
                         <p className={styles.headOfficeText}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
                     </div>
                     <div className={styles.textWrapper}>
-                        <img src={time} width={19} height={23} />
+                        <img src={time} width={19} height={23} alt="img" />
                         <p className={styles.headOfficeText}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
                     </div>
                     <div className={styles.textWrapper}>
-                        <img src={time} width={19} height={23} />
+                        <img src={time} width={19} height={23} alt="img" />
                         <p className={styles.headOfficeText}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
                     </div>
                     <div className={styles.textWrapper}>
-                        <img src={train} width={19} height={26} />
+                        <img src={train} width={19} height={26} alt="img" />
                         <p className={styles.headOfficeText}>Lorem ipsum asd asdsaweeq Lorem Ipsum</p>
                     </div>
                 </div>

@@ -30,11 +30,11 @@ const NewsLetter = () => {
                         </input>
                         <button type="button" className={styles.subscribeButton} onClick={handleSubmit}>
                             <span>Subcribe Now</span>
-                            <img src={Subscribe} className={styles.subscribeImage} />
+                            <img src={Subscribe} className={styles.subscribeImage} alt="img"/>
                         </button>
                     </div>
                 </div>
-                <img src={NewsletterImage} className={styles.image} />
+                <img src={NewsletterImage} className={styles.image} alt="img"/>
             </div>
         </div>
     )

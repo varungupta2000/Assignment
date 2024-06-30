@@ -13,7 +13,7 @@ const Cards = () => {
                     <p className={styles.description}>{item.description}</p>
                     <p className={styles.button} onClick={() => alert("Button Clicked")}>
                         Know More
-                        <img src={Arrow} className={styles.image} />
+                        <img src={Arrow} className={styles.image} alt="arrow"/>
                     </p>
                 </div>)}
 
