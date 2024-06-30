@@ -4,11 +4,12 @@
 .container {
     max-width: 1920px;
     margin: 0 auto;
-    padding: 0 16px;
-  
-    @include breakpoints("xl-tab"){
-    padding: 0 148px;
+    padding: 16px 16px 0px;
+
+    @include breakpoints("xl-tab") {
+        padding: 80px 148px 0px;
     }
+
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -45,7 +46,7 @@
 
             .inputContainer {
                 display: flex;
-                gap:10px;
+                gap: 10px;
 
                 .input {
                     width: 150px;
@@ -86,7 +87,8 @@
                 }
             }
         }
-        .image{
+
+        .image {
             @include breakpoints("xl-tab") {
                 width: 400px;
                 height: 200px;

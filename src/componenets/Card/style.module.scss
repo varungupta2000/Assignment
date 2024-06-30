@@ -1,0 +1,102 @@
+@use './../../styles/colors' as *;
+@use "./../../styles/breakpoints" as *;
+
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 16px 0px 16px 16px;
+    color: white;
+
+    @include breakpoints("xl-tab") {
+        padding: 80px 0px 80px 148px;
+    }
+
+    .cardWrapper {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-right: 16px;
+
+        @include breakpoints("xl-tab") {
+            padding-right: 148px;
+            gap: 30px;
+
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        .card {
+            background-image: url("../../assets/cardBackground.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 340px;
+            flex: 0 0 auto;
+
+            @include breakpoints("xl-tab") {
+                width: 520px;
+                height: 283px;
+            }
+
+            .heading {
+                padding: 30px 0 16px 30px;
+                font-family: 'FSAlbert';
+                font-weight: bold;
+                font-size: 22px;
+
+                @include breakpoints("xl-tab") {
+                    padding: 50px 0 27px 34px;
+                    font-size: 26px;
+                }
+            }
+
+            .description {
+                padding: 0px 100px 16px 30px;
+                font-family: 'FSAlbert';
+                font-weight: 300;
+                font-style: normal;
+                font-size: 14px;
+                white-space: normal;
+
+                @include breakpoints("xl-tab") {
+                    padding: 0 90px 38px 34px;
+                    font-size: 22px;
+                }
+            }
+
+            .button {
+                padding-left: 30px;
+                padding-bottom: 10px;
+                font-family: 'FSAlbert';
+                font-weight: 300;
+                font-style: normal;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                gap: 11px;
+                cursor: pointer;
+
+                @include breakpoints("xl-tab") {
+                    font-size: 22px;
+                    padding-left: 34px;
+                padding-bottom: 0px;
+
+                }
+
+                .image{
+                    width: 16px;
+                    height: 16px;
+
+                    @include breakpoints("xl-tab") {
+                        width: 34px;
+                        height: 34px;
+                    }
+                }
+            }
+        }
+    }
+}

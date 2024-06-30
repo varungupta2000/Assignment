@@ -16,12 +16,12 @@
         .dataWrapper {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
             gap: 32px;
 
             @include breakpoints("xl-tab") {
                 flex-direction: row;
-                column-gap: 122px;
+                justify-content: space-around;
+                column-gap: 114px;
                 row-gap: 50px;
                 flex-wrap: wrap;
             }

@@ -1,0 +1,48 @@
+@use './../../styles/colors'as *;
+@use "./../../styles/breakpoints"as *;
+
+
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 16px;
+
+    @include breakpoints("xl-tab") {
+        padding: 62px 132px 30px 148px;
+    }
+
+    .heading {
+        color: $blue;
+        font-family: 'FSAlbert';
+        font-weight: bold;
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .question {
+        display: flex;
+        gap:10px;
+        align-items: center;
+        justify-content: space-between;
+        font-family: 'FSAlbert';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        padding-bottom: 40px;
+        border-bottom: 1px solid;
+        cursor: pointer;
+        padding-top: 40px;
+    }
+
+    .answer{
+        font-family: 'FSAlbert';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        color: $dark_grey;
+        max-width: 1230px;
+        margin-top:50px;
+        padding-bottom: 40px;
+    }
+}
