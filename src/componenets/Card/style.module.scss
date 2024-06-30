@@ -4,7 +4,7 @@
 .wrapper {
     max-width: 1920px;
     margin: 0 auto;
-    padding: 16px 0px 16px 16px;
+    padding: 0px 0px 16px 16px;
     color: white;
 
     @include breakpoints("xl-tab") {

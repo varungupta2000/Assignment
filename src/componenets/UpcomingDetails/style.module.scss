@@ -1,0 +1,70 @@
+@use './../../styles/colors' as *;
+@use "./../../styles//breakpoints" as *;
+
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 74px;
+
+    @include breakpoints("xl-tab") {
+        flex-direction: row;
+        padding: 63px 148px 0px;
+    }
+
+    .headingWrapper {
+        padding-right: 60px;
+
+        @include breakpoints("xl-tab") {
+            border-right: 1px solid $grey;
+        }
+
+        .heading {
+            font-size: 30px;
+            color: $blue;
+            font-family: 'FSAlbert';
+            font-weight: bold;
+            max-width: 240px;
+
+            @include breakpoints("xl-tab") {
+                font-size: 40px;
+            }
+        }
+
+        .subHeading {
+            font-size: 14px;
+            color: $dark_grey;
+            font-family: 'FSAlbert';
+            font-weight: 300;
+            max-width: 250px;
+            margin-top: 7px;
+
+            @include breakpoints("xl-tab") {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .booking {
+        display: flex;
+        gap: 20px;
+        font-size: 24px;
+
+        .bookingHeading {
+            color: $blue;
+            font-family: 'FSAlbert';
+            font-weight: bold;
+        }
+
+        .bookingSubheading {
+            color: $dark_grey;
+            font-family: 'FSAlbert';
+            font-weight: 500;
+            max-width: 135px;
+            margin-top: 8px;
+        }
+    }
+
+}

@@ -1,0 +1,87 @@
+@use './../../styles/colors' as *;
+@use "./../../styles/breakpoints" as *;
+
+.footer {
+    background-image: url("../../assets/footer.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+
+    @include breakpoints("xl-tab") {
+        flex-direction: row;
+        padding: 77px 50px 100px 148px;
+        gap: 50px;
+    }
+
+    @include breakpoints("desktop") {
+        padding: 77px 157px 100px 148px;
+        gap: 188px;
+    }
+
+    .heading {
+        font-size: 20px;
+        font-family: 'FSAlbert';
+        font-weight: bold;
+        padding-bottom: 24px;
+
+        @include breakpoints("xl-tab") {
+            font-size: 30px;
+            padding-bottom: 34px;
+        }
+    }
+
+    .text {
+        font-family: 'FSAlbert';
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 30px;
+
+        @include breakpoints("xl-tab") {
+            font-size: 18px;
+            line-height: 36px;
+        }
+    }
+
+    .images {
+        display: flex;
+        column-gap: 30px;
+
+        @include breakpoints("xl-tab") {
+            gap: 40px;
+        }
+    }
+
+    .textWrapper {
+        display: flex;
+        gap: 17px;
+        margin-bottom: 15px;
+    }
+
+    .headOfficeText {
+        font-family: 'FSAlbert';
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 24px;
+        max-width: 424px;
+
+        @include breakpoints("xl-tab") {
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+}
+
+.copyright {
+    background-color: $dark_blue;
+    padding: 21px 0px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'FSAlbert';
+    font-weight: 300;
+}

@@ -26,6 +26,14 @@
             flex-direction: column;
             gap: 28px;
 
+            @include breakpoints("xl-tab") {
+                padding-bottom: 70px;
+            }
+
+            @include breakpoints("desktop") {
+                padding-bottom: 60px;
+            }
+
             .heading {
                 color: $blue;
                 font-family: 'FSAlbert';
@@ -92,11 +100,15 @@
             @include breakpoints("xl-tab") {
                 width: 400px;
                 height: 200px;
+                margin-top: 70px;
+
             }
 
             @include breakpoints("desktop") {
                 width: 718px;
                 height: 364px;
+                margin-top: 00px;
+
             }
         }
     }
